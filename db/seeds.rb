@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create( { name: "Mario",
+mario = User.create( { name: "Mario",
                email: "mario@savetheprinces.com",
                password: "123456",
                gender: "male",
@@ -14,7 +14,7 @@ User.create( { name: "Mario",
                description: "Plumber, Hero, Italian",
                photo: "http://balitangviral.com/wp-content/uploads/2015/09/Super-Mario-08.png",
              } )
-User.create( { name: "Luigi",
+luigi = User.create( { name: "Luigi",
                email: "luigi@savetheprinces.com",
                password: "123456",
                gender: "male",
@@ -23,3 +23,5 @@ User.create( { name: "Luigi",
                description: "Plumber, Side-kick, Italian",
                photo: "http://www.mariowiki.com/images/thumb/5/55/Luigi_Artwork_-_Super_Mario_3D_World.png/200px-Luigi_Artwork_-_Super_Mario_3D_World.png",
              } )
+
+Listing.create ( title: 'Hiking', content: 'Next friday it\'s my day off and i want to go on a hike', type: 'lalalalala', category: 'lalalalala', city: 'The Hague' )
