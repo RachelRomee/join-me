@@ -24,4 +24,4 @@ luigi = User.create( { name: "Luigi",
                photo: "http://www.mariowiki.com/images/thumb/5/55/Luigi_Artwork_-_Super_Mario_3D_World.png/200px-Luigi_Artwork_-_Super_Mario_3D_World.png",
              } )
 
-Listing.create ( title: 'Hiking', content: 'Next friday it\'s my day off and i want to go on a hike', type: 'lalalalala', category: 'lalalalala', city: 'The Hague' )
+Listing.create( {title: 'Hiking', content: 'Next friday it\'s my day off and i want to go on a hike', type: 'lalalalala', category: 'lalalalala', city: 'The Hague' })
