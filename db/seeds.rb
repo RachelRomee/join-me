@@ -24,4 +24,21 @@ luigi = User.create( { name: "Luigi",
                photo: "http://www.mariowiki.com/images/thumb/5/55/Luigi_Artwork_-_Super_Mario_3D_World.png/200px-Luigi_Artwork_-_Super_Mario_3D_World.png",
              } )
 
-Listing.create( {title: 'Hiking', content: 'Next friday it\'s my day off and i want to go on a hike', type: 'lalalalala', category: 'lalalalala', city: 'The Hague' })
+Listing.create( {title: 'Hiking',
+                 content: 'Next friday it\'s my day off and i want to go on a hike',
+                 type: 'join or invite',
+                 category: 'lalalalala',
+                 city: 'The Hague' })
+=begin
+def change
+  create_table :listings do |t|
+    t.string :title
+    t.text :content
+    t.string :type
+    t.string :category
+    t.string :city
+    t.datetime :date
+
+    t.timestamps null: false
+  end
+=end
