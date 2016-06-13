@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create( { name: "Mario",
+               email: "mario@savetheprinces.com",
+               password: "123456",
+               gender: "male",
+               age: 32,
+               city: "Milan",
+               description: "Plumber, Hero, Italian",
+               photo: "http://balitangviral.com/wp-content/uploads/2015/09/Super-Mario-08.png",
+             } )
+User.create( { name: "Luigi",
+               email: "luigi@savetheprinces.com",
+               password: "123456",
+               gender: "male",
+               age: 30,
+               city: "Pisa",
+               description: "Plumber, Side-kick, Italian",
+               photo: "http://www.mariowiki.com/images/thumb/5/55/Luigi_Artwork_-_Super_Mario_3D_World.png/200px-Luigi_Artwork_-_Super_Mario_3D_World.png",
+             } )
