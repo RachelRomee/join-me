@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615141846) do
+ActiveRecord::Schema.define(version: 20160615150529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 20160615141846) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "categories_listings", force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "listing_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "categories_listings", ["category_id"], name: "index_categories_listings_on_category_id", using: :btree
+  add_index "categories_listings", ["listing_id"], name: "index_categories_listings_on_listing_id", using: :btree
 
   create_table "listings", force: :cascade do |t|
     t.string   "title"
@@ -71,5 +81,7 @@ ActiveRecord::Schema.define(version: 20160615141846) do
 
   add_foreign_key "bookings", "listings"
   add_foreign_key "bookings", "users"
+  add_foreign_key "categories_listings", "categories"
+  add_foreign_key "categories_listings", "listings"
   add_foreign_key "listings", "users"
 end
