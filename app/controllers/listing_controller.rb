@@ -47,10 +47,7 @@ class ListingController < ApplicationController
   private
 
   def listing_params
-    params.require( :listing ).permit( :title, :content, :join_invite, :city, :date, :user_id )
+    params.require( :listing ).permit( :title, :content, :join_invite, :city, :date, :user_id, category_ids: [])
   end
-
-
-# Voor later! categories genre_ids: []
 
 end
