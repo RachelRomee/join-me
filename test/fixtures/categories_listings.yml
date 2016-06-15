@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  categories_id: 
+  linstings_id: 
+
+two:
+  categories_id: 
+  linstings_id: 
