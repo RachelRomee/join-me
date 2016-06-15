@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160613154055) do
+ActiveRecord::Schema.define(version: 20160615123324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20160613154055) do
     t.string   "title"
     t.text     "content"
     t.string   "join_invite"
-    t.string   "category"
     t.string   "city"
     t.datetime "date"
     t.datetime "created_at",  null: false
