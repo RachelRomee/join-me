@@ -1,3 +1,22 @@
+@import 'materialize';
+
+/* MATERIALIZE COMMENT: You can then include other pages such as ‘home’ or ‘main’ by writing:
+@import “home”;
+@import “main”;
+*/
+
+.brand-logo {
+  margin-left: 60px;
+}
+.hide-on-med-and-down {
+  margin-right: 60px;
+}
+.container {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
