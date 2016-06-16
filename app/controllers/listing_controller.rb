@@ -1,7 +1,7 @@
 class ListingController < ApplicationController
 
   def index
-    @listings = Listing.order(created_at: :desc)
+    @listings = Listing.order(created_at: :asc)
   end
 
   def new

@@ -1,4 +1,9 @@
 <h1>Invitations <%= link_to "+", new_listing_path, class: "btn-floating btn-large waves-effect waves-light red", style: "float:right" %></h1>
 
 
-<p><%= @listing.title %></p>
+<% @listings.each do |listing| %>
+<div class="card">
+<p><%= link_to listing.title, listing %></p>
+<p><%= listing.date %></p>
+</div>
+<% end %>

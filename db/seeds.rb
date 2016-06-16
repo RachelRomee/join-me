@@ -77,15 +77,15 @@ jason = User.create( { name: "Jason",
 
 
 Listing.create( {title: 'Clubbing', content: 'Drinking a lot of drinks', join_invite:'join', city: 'The Hague', date:(Time.now + 3.weeks), user: mario})
-Listing.create( {title: 'Dinner', content: 'Having dinner with a cosy person', join_invite:'join', city: 'Amsterdam', date:(Time.now + 3.weeks)})
-Listing.create( {title: 'Sailing', content: 'We are going to sail next week', join_invite:'join',city: 'The Haque', date:(Time.now + 3.weeks)})
-Listing.create( {title: 'Walking' , content: 'Let\'s have some walking at the park',join_invite:'join', city: 'Utrecht', date:(Time.now + 3.weeks)})
-Listing.create( {title: 'Hiking', content: 'Let\'s go hiking', join_invite:'join', city: 'Diemen', date:(Time.now + 3.weeks)})
-Listing.create( {title: 'Cinema', content: 'Next friday we are going to watch a fun movie',join_invite:'join', city: 'Eindhoven', date:(Time.now + 3.weeks)})
-Listing.create( {title: 'Swimming', content: 'Next friday we are going to swim',join_invite:'join', city: 'Leiden', date: (Time.now + 3.weeks)})
-Listing.create( {title: 'Picknicking', content: 'Let\'s have some fun at the park',join_invite:'join', city: 'Delft', date: (Time.now + 3.weeks) })
-Listing.create( {title: 'Soccer', content: 'Let\'s play soccer game' ,join_invite:'join', city: 'Amersfoort', date: (Time.now + 3.weeks)})
-Listing.create( {title: 'Gaming', content: 'Let\'s play some funny game',join_invite:'join', city: 'The Hague', date: (Time.now + 3.weeks)})
+Listing.create( {title: 'Dinner', content: 'Having dinner with a cosy person', join_invite:'join', city: 'Amsterdam', date:(Time.now + 3.weeks), user: luigi})
+Listing.create( {title: 'Sailing', content: 'We are going to sail next week', join_invite:'join',city: 'The Haque', date:(Time.now + 3.weeks), user: britney})
+Listing.create( {title: 'Walking' , content: 'Let\'s have some walking at the park',join_invite:'join', city: 'Utrecht', date:(Time.now + 3.weeks), user: janet})
+Listing.create( {title: 'Hiking', content: 'Let\'s go hiking', join_invite:'join', city: 'Diemen', date:(Time.now + 3.weeks), user: britney})
+Listing.create( {title: 'Cinema', content: 'Next friday we are going to watch a fun movie',join_invite:'join', city: 'Eindhoven', date:(Time.now + 3.weeks), user: luigi})
+Listing.create( {title: 'Swimming', content: 'Next friday we are going to swim',join_invite:'join', city: 'Leiden', date: (Time.now + 3.weeks), user: janet})
+Listing.create( {title: 'Picknicking', content: 'Let\'s have some fun at the park',join_invite:'join', city: 'Delft', date: (Time.now + 3.weeks), user: mario})
+Listing.create( {title: 'Soccer', content: 'Let\'s play soccer game' ,join_invite:'join', city: 'Amersfoort', date: (Time.now + 3.weeks), user: britney})
+Listing.create( {title: 'Gaming', content: 'Let\'s play some funny game',join_invite:'join', city: 'The Hague', date: (Time.now + 3.weeks), user: luigi})
 
 categories =[
 "clubbing",
