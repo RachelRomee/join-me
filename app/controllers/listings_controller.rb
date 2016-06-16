@@ -10,10 +10,10 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.new(listing_params)
+    listing = Listing.new(listing_params)
 
     if listing.save
-      redirect_to user_path(listing.user_id)
+      redirect_to listings_path(listing.user_id)
     else
       render 'new'
     end
@@ -40,7 +40,7 @@ class ListingsController < ApplicationController
 
     @listing.destroy
 
-    redirect_to user_path(user_path)
+    redirect_to listings_path(listings_path)
 
   end
 
