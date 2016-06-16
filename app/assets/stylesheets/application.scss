@@ -11,19 +11,38 @@ nav {
   color: #FFC878 !important;
   margin-left: 60px;
 }
-.active {
-}
-.grey-background {
-  background-color: #ddd;
-}
-.hide-on-med-and-down {
-  margin-right: 60px;
-}
-
 .center-text {
   text-align: center;
 }
 
+.active {
+}
+
+.hide-on-med-and-down {
+  margin-right: 60px;
+}
+
+// LISTING INDEX PAGE
+.grey-background {
+  background-color: #ddd;
+}
+.card-title {
+  line-height: 0px;
+}
+.card-detail-title {
+  line-height: 0px;
+  color: #481848;
+  font-weight: 500;
+}
+.card-detail-top {
+  padding-top: 10px;
+}
+.card-right-side a {
+  color: white;
+}
+
+
+//
 [type="radio"]:not(:checked) + label,
 [type="radio"]:checked + label {
   margin-left: 2em;
