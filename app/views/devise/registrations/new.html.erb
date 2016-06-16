@@ -25,7 +25,7 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
+<br />
   <div class="field">
     <%= f.radio_button :gender, "Female", class: "with-gap" %>
     <%= f.label :gender_female, "Female" %>
@@ -33,7 +33,7 @@
     <%= f.radio_button :gender, "Male", class: "with-gap" %>
     <%= f.label :gender_male, "Male" %>
   </div>
-
+<br />
   <div class="field">
     <%= f.label :age %><br />
     <%= f.text_field :age %>
@@ -53,10 +53,11 @@
     <%= f.label :photo %><br />
     <%= f.text_field :photo %>
   </div>
-
+<br />
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: "btn waves-effect waves-light" %>
+    <%= link_to "Back", :back, :class => "btn waves-effect waves-light" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+<br />
+<%= render "devise/shared/links"%>

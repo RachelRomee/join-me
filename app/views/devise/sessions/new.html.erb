@@ -17,10 +17,13 @@
       <%= f.label :remember_me %>
     </div>
   <% end -%>
-
+<br />
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "btn waves-effect waves-light" %>
+    <%= link_to "Back", :back, :class => "btn waves-effect waves-light" %>
   </div>
-<% end %>
 
+
+<% end %>
+<br />
 <%= render "devise/shared/links" %>
