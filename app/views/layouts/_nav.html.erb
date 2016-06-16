@@ -4,16 +4,13 @@
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><%= link_to "Invitations", listing_index_path %></li>
-<<<<<<< HEAD
-      <li><%= link_to "Users", user_index_path %></li>
 
       <% if !user_signed_in? %>
-      <li><%= link_to "Log in", new_user_session_path %></li>
-<% else %>
-      <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
-       <% end %>
-=======
->>>>>>> a20e9f5d0cc95fc417440f4789717a1a8611f946
+        <li><%= link_to "Log In", new_user_session_path %></li>
+        <% else %>
+        <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
+        <% end %>
+
     </ul>
   </div>
 </nav>
