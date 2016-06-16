@@ -8,8 +8,14 @@
   text-transform: capitalize;
   font-weight: 300;
 }
+nav {
+  background-color: #481848;
+}
 .brand-logo {
+  color: #FFC878 !important;
   margin-left: 60px;
+}
+.active {
 }
 .hide-on-med-and-down {
   margin-right: 60px;
