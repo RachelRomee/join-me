@@ -100,6 +100,6 @@ categories =[
 "gaming",
 ]
 
-categories.each do |genre_name|
-  genre = Genre.create(name: genre_name)
+categories.each do |category_name|
+  category = Category.create(name: category_name)
 end
