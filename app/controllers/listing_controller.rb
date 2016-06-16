@@ -1,7 +1,7 @@
 class ListingController < ApplicationController
 
   def index
-    @listings = Listing.all
+    @listings = Listing.order(created_at: :desc)
   end
 
   def new
@@ -10,12 +10,12 @@ class ListingController < ApplicationController
   end
 
   def create
-    listing = Listing.new(listing_params)
+    @listing = Listing.new(listing_params)
 
     if listing.save
       redirect_to user_path(listing.user_id)
     else
-      render new_listing_path
+      render 'new'
     end
   end
 
