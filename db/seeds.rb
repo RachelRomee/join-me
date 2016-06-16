@@ -5,40 +5,101 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-mario = User.create( { name: "Mario",
-               email: "mario@savetheprinces.com",
-               password: "123456",
-               gender: "male",
-               age: 32,
-               city: "Milan",
-               description: "Plumber, Hero, Italian",
-               photo: "http://balitangviral.com/wp-content/uploads/2015/09/Super-Mario-08.png",
-             } )
+mario = User.create( {  name: "Mario",
+                        email: "mario@savetheprinces.com",
+                        password: "123456",
+                        gender: "male",
+                        age: 32,
+                        city: "Milan",
+                        description: "Plumber, Hero, Italian",
+                        photo: "images/user1.jpg",
+                        } )
+
 luigi = User.create( { name: "Luigi",
-               email: "luigi@savetheprinces.com",
-               password: "123456",
-               gender: "male",
-               age: 30,
-               city: "Pisa",
-               description: "Plumber, Side-kick, Italian",
-               photo: "http://www.mariowiki.com/images/thumb/5/55/Luigi_Artwork_-_Super_Mario_3D_World.png/200px-Luigi_Artwork_-_Super_Mario_3D_World.png",
-             } )
+                        email: "luigi@savetheprinces.com",
+                        password: "123456",
+                        gender: "male",
+                        age: 30,
+                        city: "Pisa",
+                        description: "Plumber, Side-kick, Italian",
+                        photo: "images/user2.jpg",
+                        } )
 
-Listing.create( {title: 'Hiking',
-                 content: 'Next friday it\'s my day off and i want to go on a hike',
-                 type: 'join or invite',
-                 category: 'lalalalala',
-                 city: 'The Hague' })
-=begin
-def change
-  create_table :listings do |t|
-    t.string :title
-    t.text :content
-    t.string :type
-    t.string :category
-    t.string :city
-    t.datetime :date
+britney = User.create( { name: "Britney",
+                        email: "britney@savetheprinces.com",
+                        password: "234567",
+                        gender: "female",
+                        age: 18,
+                        city: "Paris",
+                        description: "Developer, Tennis, French",
+                        photo: "images/user3.jpg",
+                          } )
 
-    t.timestamps null: false
-  end
-=end
+janet = User.create( { name: "Janet",
+                          email: "janet@savetheprinces.com",
+                          password: "345678",
+                          gender: "female",
+                          age: 28,
+                          city: "Amsterdam",
+                          description: "Designer, Marathon, Dutch",
+                          photo: "images/user4.jpg",
+                          } )
+
+rowena = User.create( { name: "Rowena",
+                        email: "rowena@savetheprinces.com",
+                        password: "345678",
+                        gender: "female",
+                        age: 43,
+                        city: "Berlin",
+                        description: "Accountant, Reading books, German",
+                        photo: "images/user5.jpg",
+                        } )
+
+steven = User.create( { name: "Steven",
+                      email: "steven@savetheprinces.com",
+                        password: "456789",
+                        gender: "male",
+                        age: 43,
+                        city: "London",
+                        description: "Product Manager, Soccer, United Kingdom",
+                        photo: "images/user6.jpg",
+                                                } )
+
+jason = User.create( { name: "Jason",
+                      email: "jason@savetheprinces.com",
+                      password: "567897",
+                      gender: "male",
+                      age: 32,
+                      city: "Madrid",
+                      description: "Logistics Employer, Cooking, Spanish",
+                      photo: "images/user7.jpg",
+                      } )
+
+
+Listing.create( {title: 'Clubbing', content: 'Drinking a lot of drinks',category:'', city: 'The Hague', date:(Time.now + 3.weeks)})
+Listing.create( {title: 'Dinner', content: 'Having dinner with a cosy person', category:'', city: 'Amsterdam', date:(Time.now + 3.weeks)})
+Listing.create( {title: 'Sailing', content: 'We are going to sail next week', category:'',city: 'The Haque', date:(Time.now + 3.weeks)})
+Listing.create( {title: 'Walking' , content: 'Let\'s have some walking at the park',category:'', city: 'Utrecht', date:(Time.now + 3.weeks)})
+Listing.create( {title: 'Hiking', content: 'Let\'s hiking',category:'', city: 'Diemen', date:(Time.now + 3.weeks)})
+Listing.create( {title: 'Cinema', content: 'Next friday we are going to watch a fun movie',category:'', city: 'Eindhoven', date:(Time.now + 3.weeks)})
+Listing.create( {title: 'Swimming', content: 'Next friday we are going to swim',category:'', city: 'Leiden', date: (Time.now + 3.weeks)})
+Listing.create( {title: 'Picknicking', content: 'Let\'s have some fun at the park',category:'', city: 'Delft', date: (Time.now + 3.weeks) })
+Listing.create( {title: 'Soccer', content: 'Let\'s play soccer game' ,category:'', city: 'Amersfoort', date: (Time.now + 3.weeks)})
+Listing.create( {title: 'Gaming', content: 'Let\'s play some funny game',category:'', city: 'The Hague', date: (Time.now + 3.weeks)})
+
+categories =[
+"clubbing",
+"dinner",
+"sailing",
+"walking",
+"hiking",
+"cinema",
+"swimming",
+"picknicking",
+"soccer",
+"gaming",
+]
+
+categories.each do |genre_name|
+  genre = Genre.create(name: genre_name)
+end
