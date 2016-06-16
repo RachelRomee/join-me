@@ -48,7 +48,7 @@ class ListingsController < ApplicationController
   def user
     @user = User.find( params[:user_id] )
 
-    #@listings = Listing.where( user: @user ).order( created_at: :desc )
+    @listings = Listing.where( user: @user ).order( created_at: :desc )
 
   #  @likes = @user.likes.joins( :post ).order( "posts.created_at DESC" )
 
