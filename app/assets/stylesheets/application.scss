@@ -16,6 +16,19 @@
   margin-right: 60px;
 }
 
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  margin-left: 2em;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+[type="radio"]:not(:checked):first-child + label,
+[type="radio"]:checked:first-child + label {
+  margin-left: 0;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
