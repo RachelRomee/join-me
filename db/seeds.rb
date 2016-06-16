@@ -12,7 +12,7 @@ mario = User.create( { name: "Mario",
                         age: 18,
                         city: "Paris",
                         description: "Developer, Tennis, French",
-                        photo: "images/user3.jpg",
+                        photo: "user3.jpg",
                           } )
 
 luigi = User.create( { name: "Luigi",
@@ -22,9 +22,9 @@ luigi = User.create( { name: "Luigi",
                         age: 18,
                         city: "Paris",
                         description: "Developer, Tennis, French",
-                        photo: "images/user3.jpg",
+                        photo: "user3.jpg",
                           } )
-                          
+
 britney = User.create( { name: "Britney",
                         email: "britney@savetheprinces.com",
                         password: "234567",
@@ -32,7 +32,7 @@ britney = User.create( { name: "Britney",
                         age: 18,
                         city: "Paris",
                         description: "Developer, Tennis, French",
-                        photo: "images/user3.jpg",
+                        photo: "user3.jpg",
                           } )
 
 janet = User.create( { name: "Janet",
@@ -42,7 +42,7 @@ janet = User.create( { name: "Janet",
                           age: 28,
                           city: "Amsterdam",
                           description: "Designer, Marathon, Dutch",
-                          photo: "images/user4.jpg",
+                          photo: "user4.jpg",
                           } )
 
 rowena = User.create( { name: "Rowena",
@@ -52,7 +52,7 @@ rowena = User.create( { name: "Rowena",
                         age: 43,
                         city: "Berlin",
                         description: "Accountant, Reading books, German",
-                        photo: "images/user5.jpg",
+                        photo: "user5.jpg",
                         } )
 
 steven = User.create( { name: "Steven",
@@ -62,7 +62,7 @@ steven = User.create( { name: "Steven",
                         age: 43,
                         city: "London",
                         description: "Product Manager, Soccer, United Kingdom",
-                        photo: "images/user6.jpg",
+                        photo: "user6.jpg",
                                                 } )
 
 jason = User.create( { name: "Jason",
@@ -72,7 +72,7 @@ jason = User.create( { name: "Jason",
                       age: 32,
                       city: "Madrid",
                       description: "Logistics Employer, Cooking, Spanish",
-                      photo: "images/user7.jpg",
+                      photo: "user7.jpg",
                       } )
 
 
