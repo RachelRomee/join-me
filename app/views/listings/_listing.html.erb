@@ -3,13 +3,13 @@
     <div class="row">
       <div class="col s2 grey-background">     <!--left column for image-->
           <p class="center-align"><%= image_tag listing.user.photo %></p>
-          <strong><p class="center-text"><%= listing.user.name %></p></strong>
+          <p class="listing-user-name"><%= link_to listing.user.name, root_path %></p>
       </div>
       <div class="col s8 card-margin-left">
-        <p class="card-title"><%= link_to lis ting.title, listing %></p>
+        <p class="card-title"><%= link_to listing.title, listing %></p>
         <div class="divider"></div>
         <p><%= listing.content %></p>
-        <div class="divider"></div>
+
 <!-- here will be the tags -->
       </div>
       <div class="col s2 card-right-side">

@@ -11,17 +11,21 @@ nav {
   color: #FFC878 !important;
   margin-left: 60px;
 }
-.center-text {
-  text-align: center;
-}
-
 .active {
 }
 
 .hide-on-med-and-down {
   margin-right: 60px;
 }
+.button-margin {
+  margin-left: 5px;
+  margin-right: 5px;
 
+
+}
+.form-description {
+  padding-bottom: 150px;
+}
 // LISTING INDEX PAGE
 .grey-background {
   background-color: #ddd;
@@ -40,7 +44,15 @@ nav {
 .card-right-side a {
   color: white;
 }
-
+.listing-user-name {
+  text-align: center;
+  font-size: 20px;
+  line-height: 0px;
+  padding-bottom: 4px;
+}
+.listing-user-name a {
+    color: #2BBBAD;
+}
 
 //
 [type="radio"]:not(:checked) + label,

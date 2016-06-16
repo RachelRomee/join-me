@@ -1,6 +1,6 @@
 
 <div class="row">
-<div class="col s12 m8 offset-m2 center">
+<div class="col s12 m8  center">
 
 
 <%= form_for @listing do |f| %>
@@ -8,6 +8,11 @@
   <div class="input-field">
     <%= f.label :title %>
     <%= f.text_field :title, autofocus: true %>
+  </div>
+
+  <div class="input-field">
+  <%= f.label :date %>
+  <%= f.date_field :date, autofocus: true %>
   </div>
 
   <div class="input-field">
@@ -19,8 +24,8 @@
 
 
   <div class="input-field">
-  <%= f.label :description  %>
-  <%= f.text_area :content, autofocus: true %>
+  <%= f.label :description %>
+  <%= f.text_area :content, autofocus: true, class: "form-description" %>
   </div>
 
 <br />
