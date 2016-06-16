@@ -1,3 +1,5 @@
+<h1> sign up </h1>
+
 <%= form_for @user do |f| %>
 
     <div>
@@ -10,24 +12,11 @@
        <%= f.text_field :city, placeholder: ". . ."   %>
     </div>
 
-    <form action="#">
-      <p>
-        <%= f.radio_button :gender, 'male', :checked => true %> male
-        <%= f.radio_button :gender, 'female' %> female
-        <input class="with-gap" name="group1" type="radio" id="male" />
-        <label for="test1">Male</label>
-      </p>
-      <p>
-        <input class="with-gap" name="group1" type="radio" id="female" />
-        <label for="test2">Female</label>
-      </p>
-    </form>
-
     <div>
        <%= f.label :description %>
        <%= f.text_area :description, rows: 10  %>
     </div>
 
-    <%= f.submit (@user.new_record? ? "Create" : "Update")%>
+    <%= f.submit (@user.new_record? ? "Create" : "Update") %>
 
 <% end %>
