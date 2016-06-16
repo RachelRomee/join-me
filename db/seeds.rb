@@ -14,6 +14,7 @@ mario = User.create( { name: "Mario",
                         description: "Developer, Tennis, French",
                         photo: "images/user3.jpg",
                           } )
+
 luigi = User.create( { name: "Luigi",
                         email: "luigi@savetheprinces.com",
                         password: "787837",
@@ -23,6 +24,7 @@ luigi = User.create( { name: "Luigi",
                         description: "Developer, Tennis, French",
                         photo: "images/user3.jpg",
                           } )
+                          
 britney = User.create( { name: "Britney",
                         email: "britney@savetheprinces.com",
                         password: "234567",
