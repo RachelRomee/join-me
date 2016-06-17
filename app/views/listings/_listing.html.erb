@@ -1,29 +1,27 @@
-<% @listings.each do |listing| %>
-  <div class="card hoverable">
-    <div class="row">
-      <div class="col s2 grey-background">     <!--left column for image-->
-          <p class="center-align">
-            <%= image_tag listing.user.photo %></p>
-          <p class="listing-user-name">
-            <%= link_to listing.user.name, root_path %></p>
-      </div>
-      <div class="col s8 card-margin-left">
-        <p class="card-title">
-          <%= link_to listing.title, listing %></p>
-        <div class="divider"></div>
-        <p><%= listing.content %></p>
+<div class="card hoverable">
+  <div class="row">
+    <div class="col s2 grey-background">     <!--left column for image-->
+        <p class="center-align">
+          <%= image_tag listing.user.photo %></p>
+        <p class="listing-user-name">
+          <%= link_to listing.user.name, user_path(listing.user) %></p>
+    </div>
+    <div class="col s8 card-margin-left">
+      <p class="card-title">
+        <%= link_to listing.title, listing %></p>
+      <div class="divider"></div>
+      <p><%= listing.content %></p>
 
 <!-- here will be the tags -->
-      </div>
-      <div class="col s2 card-right-side">
-        <p class="card-detail-title card-detail-top">Date</p>
-        <p><%= listing.date.strftime('%m/%d/%Y') %></p>
-        <p class="card-detail-title">City</p>
-        <p><%= listing.city %></p>
+    </div>
+    <div class="col s2 card-right-side">
+      <p class="card-detail-title card-detail-top">Date</p>
+      <p><%= listing.date.strftime('%m/%d/%Y') %></p>
+      <p class="card-detail-title">City</p>
+      <p><%= listing.city %></p>
 
-        <p class="waves-effect waves-light btn white-links">
-          <%= link_to "Join!", root_path %></p>
-      </div>
+      <p class="waves-effect waves-light btn white-links">
+        <%= link_to "Join!", listing_bookings_path(listing), method: :post %></p>
     </div>
   </div>
-<% end %>
+</div>

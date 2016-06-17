@@ -4,7 +4,6 @@
   <title>JoinMe</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,11 +11,16 @@
 
   <%= render "layouts/nav"%>
 
-  <div class="container">
-      
-      <%= yield %>
-
+  <div class="container background-home">
+    <%= yield %>
   </div>
 
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script>
+  <% flash.each do |type, message| %>
+    var $toast<%= type %> = $('<span><%= message %></span>');
+    Materialize.toast($toast<%= type %>, 5000);
+  <% end %>
+  </script>
 </body>
 </html>

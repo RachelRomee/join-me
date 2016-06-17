@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, notice: "You don't have access to that, sorry!"
   end
 
+  def after_sign_in_path_for(user)
+    listings_path
+  end
+
   protected
 
     def needs_sign_in?

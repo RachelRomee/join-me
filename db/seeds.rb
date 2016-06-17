@@ -84,7 +84,7 @@ Listing.create( {title: 'Sailing', content: 'We are going to sail next week', jo
 Listing.create( {title: 'Walking' , content: 'Let\'s have some walking at the park',join_invite:'join', city: 'Utrecht', date:(Time.now + 3.weeks), user: janet})
 Listing.create( {title: 'Hiking', content: 'Let\'s go hiking', join_invite:'join', city: 'Diemen', date:(Time.now + 3.weeks), user: jason})
 Listing.create( {title: 'Cinema', content: 'Next friday we are going to watch a fun movie',join_invite:'join', city: 'Eindhoven', date:(Time.now + 3.weeks), user: luigi})
-Listing.create( {title: 'Swimming', content: 'Next friday we are going to swim',join_invite:'join', city: 'Leiden', date: (Time.now + 3.weeks), user: stefan})
+Listing.create( {title: 'Swimming', content: 'Next friday we are going to swim',join_invite:'join', city: 'Leiden', date: (Time.now + 3.weeks), user: steven})
 Listing.create( {title: 'Picknicking', content: 'Let\'s have some fun at the park',join_invite:'join', city: 'Delft', date: (Time.now + 3.weeks), user: mario})
 Listing.create( {title: 'Soccer', content: 'Let\'s play soccer game' ,join_invite:'join', city: 'Amersfoort', date: (Time.now + 3.weeks), user: britney})
 Listing.create( {title: 'Gaming', content: 'Let\'s play some funny game',join_invite:'join', city: 'The Hague', date: (Time.now + 3.weeks), user: luigi})
