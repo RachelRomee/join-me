@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def listing
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
     authorize! :read, @user
 
     @listings = Listing.where(user: @user).order(created_at: :desc)
