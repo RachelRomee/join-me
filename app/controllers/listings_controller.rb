@@ -2,6 +2,7 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.order(created_at: :desc)
+    authorize! :read, @listings
   end
 
   def new
@@ -10,8 +11,11 @@ class ListingsController < ApplicationController
   end
 
   def create
+    listing_params = params.require( :post ).permit( :content )
+
     listing = Listing.new(listing_params)
     @listing.user = current_user
+    authorize! :create, @listing
 
     if listing.save
       redirect_to listings_path(listing.user_id)
@@ -47,8 +51,10 @@ class ListingsController < ApplicationController
 
   def user
     @user = User.find( params[:user_id] )
+    authorize! :read, @user
 
     @listings = Listing.where( user: @user ).order( created_at: :desc )
+    authorize! :read, @listings
 
   #  @likes = @user.likes.joins( :post ).order( "posts.created_at DESC" )
 
