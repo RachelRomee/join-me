@@ -61,4 +61,5 @@ class ListingsController < ApplicationController
     params.require( :listing ).permit( :title, :content, :join_invite, :city, :date, :user_id, category_ids: [])
   end
 
+
 end

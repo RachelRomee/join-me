@@ -14,4 +14,8 @@ class UsersController < ApplicationController
     # @bookings = @user.likes.joins(:post).order("posts.created_at DESC")
     # authorize! :read, @likes
   end
+
+def user_params
+params.require(:user).permit(:name, :email, :gender, :age, :city, :description, :photo)
+end
 end
