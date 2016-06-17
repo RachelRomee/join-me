@@ -1,19 +1,13 @@
+  <div class="row background-home">
 
-<div class="row">
-
-  <div class="col s4">
-<!--  sign up form -->
-    <h1>Sign up form here</h1>
+    <div class="col s5 welcome-left-col">
+  <!--  sign up form -->
+      <%= link_to "Sign Up", new_user_registration_path, class: "waves-effect waves-light btn-large button-margin" %>
+      <%= link_to "Log In", new_user_session_path, class: "waves-effect waves-light btn-large button-margin" %>
+    </div>
+    <div class="col s7 welcome-right-col">
+  <!-- join me and text -->
+      <h1 class="welcome-h1">Join Me!</h1>
+      <p>...............</p>
+    </div>
   </div>
-  <div class="col s8">
-<!-- join me and text -->
-    <h1 class="welcome-h1">Join Me!</h1>
-  </div>
-</div>
-
-
-
-
-
-
-<%= link_to "[New User]", new_user_registration_path %>
