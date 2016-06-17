@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, if: :needs_sign_in?
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def after_sign_in_path_for(resource)
+    listings_path
+  end
+
   protected
 
     def needs_sign_in?
