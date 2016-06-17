@@ -12,11 +12,8 @@ mario = User.create( { name: "Mario",
                         age: 18,
                         city: "Paris",
                         description: "Developer, Tennis, French",
-<<<<<<< HEAD
                         photo: "images/user3.jpg",
-=======
                         photo: "user1.jpg",
->>>>>>> 868c38ed685e45249fce07c287b88efc8575415e
                           } )
 
 luigi = User.create( { name: "Luigi",
@@ -26,11 +23,8 @@ luigi = User.create( { name: "Luigi",
                         age: 18,
                         city: "Paris",
                         description: "Developer, Tennis, French",
-<<<<<<< HEAD
                         photo: "images/user3.jpg",
-=======
                         photo: "user2.jpg",
->>>>>>> 868c38ed685e45249fce07c287b88efc8575415e
                           } )
 
 britney = User.create( { name: "Britney",
