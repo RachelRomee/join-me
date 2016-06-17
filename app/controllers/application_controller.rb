@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, if: :needs_sign_in?
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_path, notice: "You don't have access to that, sorry!"
+  end
+
   protected
 
     def needs_sign_in?
