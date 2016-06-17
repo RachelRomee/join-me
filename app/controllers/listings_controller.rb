@@ -49,7 +49,7 @@ class ListingsController < ApplicationController
 
     @listings = Listing.where( user: @user ).order( created_at: :desc )
 
-    @bookings = @user.bookings.joins( :listing ).order("posts.created_at DESC")
+    @bookings = @user.bookings.joins( :listing ).order("listings.created_at DESC")
 
 
   end
