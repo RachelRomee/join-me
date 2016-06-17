@@ -1,15 +1,14 @@
 class ListingsController < ApplicationController
+  load_and_authorize_resource
+
   def index
-    @listings = Listing.order(created_at: :desc)
+    @listings = @listings.order(created_at: :desc)
   end
 
   def new
-    @listing = Listing.new
-    @listing.user_id = params[:user_id]
   end
 
   def create
-    @listing = Listing.new(listing_params)
     @listing.user = current_user
 
     if @listing.save
@@ -20,12 +19,9 @@ class ListingsController < ApplicationController
   end
 
   def edit
-    @listing = Listing.find(params[:id])
   end
 
   def update
-    @listing = Listing.find(params[:id])
-
     if @listing.update_attributes(listing_params)
       redirect_to @listing
     else
@@ -34,20 +30,19 @@ class ListingsController < ApplicationController
   end
 
   def destroy
-    @listing = Listing.find(params[:id])
-
-    user_id = @listing.user_id
-
-    @listing.destroy
-
-    redirect_to listings
-
+    if @listing.destroy
+      redirect_to listings_path, notice: "Whoop! That listing is gone!"
+    else
+      redirect_to @listing, notice: "Sorry! Could not destroy this listing!"
+    end
   end
 
   def user
     @user = User.find( params[:user_id] )
+    authorize! :read, @user
 
     @listings = Listing.where( user: @user ).order( created_at: :desc )
+    authorize! :read, @listings
 
     @bookings = @user.bookings.joins( :listing ).order("listings.created_at DESC")
 
@@ -58,7 +53,7 @@ class ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require( :listing ).permit( :title, :content, :join_invite, :city, :date, :user_id)
+    params.require(:listing).permit( :title, :content, :join_invite, :city, :date, :user_id, category_ids: [])
   end
 
 
