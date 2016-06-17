@@ -2,11 +2,14 @@
   <div class="card hoverable">
     <div class="row">
       <div class="col s2 grey-background">     <!--left column for image-->
-          <p class="center-align"><%= image_tag listing.user.photo %></p>
-          <p class="listing-user-name"><%= link_to listing.user.name, root_path %></p>
+          <p class="center-align">
+            <%= image_tag listing.user.photo %></p>
+          <p class="listing-user-name">
+            <%= link_to listing.user.name, root_path %></p>
       </div>
       <div class="col s8 card-margin-left">
-        <p class="card-title"><%= link_to listing.title, listing %></p>
+        <p class="card-title">
+          <%= link_to listing.title, listing %></p>
         <div class="divider"></div>
         <p><%= listing.content %></p>
 
@@ -18,7 +21,8 @@
         <p class="card-detail-title">City</p>
         <p><%= listing.city %></p>
 
-        <p class="waves-effect waves-light btn white-links"><%= link_to "Join!", root_path %></p>
+        <p class="waves-effect waves-light btn white-links">
+          <%= link_to "Join!", root_path %></p>
       </div>
     </div>
   </div>

@@ -4,15 +4,25 @@
   <div class="row">
     <!-- LEFT COLUMN -->
     <div class="col s7">
-      <h5> hier komt de info </h5>
-      <p><%= @user.age %></p>
+        <h6>Age</h6>
+        <p><%= @user.age %></p>
+        <h6>Gender</h6>
+        <p><%= @user.gender %></p>
+        <h6>City</h6>
+        <p><%= @user.city %></p>
+        <h6>Something about me</h6>
+        <p><%= @user.description %></p>
+        <div class="divider"></div>
     </div>
 
     <!-- RIGHT COLUMN -->
     <div class="col s5 ">
-      <p class="right-align profile-photo"><%= image_tag @user.photo %></p>
+      <p class="right-align profile-photo">
+        <%= image_tag @user.photo %></p>
     </div>
+
     <!-- BELOW -->
+
     <div class="col s12">
       <h2> hier komen de listings </h2>
     </div>
