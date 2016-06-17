@@ -11,17 +11,7 @@ nav {
   color: #FFC878 !important;
   margin-left: 60px;
 }
-h6 {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-weight: 500;
-}
-.profile-photo img {
-  width: 90%;
-  height: 90%;
-  margin-top: -20%;
-  margin-right: 20%;
-}
+
 .active {
 }
 // WELCOME INDEX PAGE
@@ -29,6 +19,11 @@ h6 {
 //   background-image: url('https://images.unsplash.com/35/yjA2So4sRtmdLFRSkD5t_moulin-fisk.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=526b3d5b42348e1b414c415e467f73a0');
 //   background-size: cover;
 // }
+
+// .background-home {
+//   background-image: image(2144);
+// }
+
 .welcome-left-col {
   margin-top: 215px;
 }
@@ -40,6 +35,20 @@ h6 {
   font-size: 80px;
   font-weight: 600;
 
+}
+// USER PROFILE PAGE
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: #481848;
+}
+
+.profile-photo img {
+  width: 90%;
+  height: 90%;
+  margin-top: -20%;
+  margin-right: 20%;
 }
 //
 .hide-on-med-and-down {
