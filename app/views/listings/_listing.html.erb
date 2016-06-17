@@ -5,7 +5,7 @@
           <p class="center-align">
             <%= image_tag listing.user.photo %></p>
           <p class="listing-user-name">
-            <%= link_to listing.user.name, root_path %></p>
+            <%= link_to listing.user.name, user_path(listing.user) %></p>
       </div>
       <div class="col s8 card-margin-left">
         <p class="card-title">
