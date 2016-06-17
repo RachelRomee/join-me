@@ -11,8 +11,8 @@ class ListingsController < ApplicationController
   end
 
   def create
-    if listing.save
-      redirect_to listings_path(listing.user_id)
+    if @listing.save
+      redirect_to listings_path#(listing.user_id)
     else
       render 'new'
     end
