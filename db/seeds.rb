@@ -12,7 +12,11 @@ mario = User.create( { name: "Mario",
                         age: 18,
                         city: "Paris",
                         description: "Developer, Tennis, French",
+<<<<<<< HEAD
                         photo: "images/user3.jpg",
+=======
+                        photo: "user1.jpg",
+>>>>>>> 868c38ed685e45249fce07c287b88efc8575415e
                           } )
 
 luigi = User.create( { name: "Luigi",
@@ -22,7 +26,11 @@ luigi = User.create( { name: "Luigi",
                         age: 18,
                         city: "Paris",
                         description: "Developer, Tennis, French",
+<<<<<<< HEAD
                         photo: "images/user3.jpg",
+=======
+                        photo: "user2.jpg",
+>>>>>>> 868c38ed685e45249fce07c287b88efc8575415e
                           } )
 
 britney = User.create( { name: "Britney",
@@ -32,7 +40,7 @@ britney = User.create( { name: "Britney",
                         age: 18,
                         city: "Paris",
                         description: "Developer, Tennis, French",
-                        photo: "images/user3.jpg",
+                        photo: "user3.jpg",
                           } )
 
 janet = User.create( { name: "Janet",
@@ -42,7 +50,7 @@ janet = User.create( { name: "Janet",
                           age: 28,
                           city: "Amsterdam",
                           description: "Designer, Marathon, Dutch",
-                          photo: "images/user4.jpg",
+                          photo: "user4.jpg",
                           } )
 
 rowena = User.create( { name: "Rowena",
@@ -52,7 +60,7 @@ rowena = User.create( { name: "Rowena",
                         age: 43,
                         city: "Berlin",
                         description: "Accountant, Reading books, German",
-                        photo: "images/user5.jpg",
+                        photo: "user5.jpg",
                         } )
 
 steven = User.create( { name: "Steven",
@@ -62,7 +70,7 @@ steven = User.create( { name: "Steven",
                         age: 43,
                         city: "London",
                         description: "Product Manager, Soccer, United Kingdom",
-                        photo: "images/user6.jpg",
+                        photo: "user6.jpg",
                                                 } )
 
 jason = User.create( { name: "Jason",
@@ -72,17 +80,17 @@ jason = User.create( { name: "Jason",
                       age: 32,
                       city: "Madrid",
                       description: "Logistics Employer, Cooking, Spanish",
-                      photo: "images/user7.jpg",
+                      photo: "user7.jpg",
                       } )
 
 
 Listing.create( {title: 'Clubbing', content: 'Drinking a lot of drinks', join_invite:'join', city: 'The Hague', date:(Time.now + 3.weeks), user: mario})
-Listing.create( {title: 'Dinner', content: 'Having dinner with a cosy person', join_invite:'join', city: 'Amsterdam', date:(Time.now + 3.weeks), user: luigi})
+Listing.create( {title: 'Dinner', content: 'Having dinner with a cosy person', join_invite:'join', city: 'Amsterdam', date:(Time.now + 3.weeks), user: rowena})
 Listing.create( {title: 'Sailing', content: 'We are going to sail next week', join_invite:'join',city: 'The Haque', date:(Time.now + 3.weeks), user: britney})
 Listing.create( {title: 'Walking' , content: 'Let\'s have some walking at the park',join_invite:'join', city: 'Utrecht', date:(Time.now + 3.weeks), user: janet})
-Listing.create( {title: 'Hiking', content: 'Let\'s go hiking', join_invite:'join', city: 'Diemen', date:(Time.now + 3.weeks), user: britney})
+Listing.create( {title: 'Hiking', content: 'Let\'s go hiking', join_invite:'join', city: 'Diemen', date:(Time.now + 3.weeks), user: jason})
 Listing.create( {title: 'Cinema', content: 'Next friday we are going to watch a fun movie',join_invite:'join', city: 'Eindhoven', date:(Time.now + 3.weeks), user: luigi})
-Listing.create( {title: 'Swimming', content: 'Next friday we are going to swim',join_invite:'join', city: 'Leiden', date: (Time.now + 3.weeks), user: janet})
+Listing.create( {title: 'Swimming', content: 'Next friday we are going to swim',join_invite:'join', city: 'Leiden', date: (Time.now + 3.weeks), user: stefan})
 Listing.create( {title: 'Picknicking', content: 'Let\'s have some fun at the park',join_invite:'join', city: 'Delft', date: (Time.now + 3.weeks), user: mario})
 Listing.create( {title: 'Soccer', content: 'Let\'s play soccer game' ,join_invite:'join', city: 'Amersfoort', date: (Time.now + 3.weeks), user: britney})
 Listing.create( {title: 'Gaming', content: 'Let\'s play some funny game',join_invite:'join', city: 'The Hague', date: (Time.now + 3.weeks), user: luigi})

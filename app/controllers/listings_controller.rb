@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
 
   def index
-    @listings = Listing.order(created_at: :asc)
+    @listings = Listing.order(created_at: :desc)
   end
 
   def new
@@ -11,6 +11,7 @@ class ListingsController < ApplicationController
 
   def create
     listing = Listing.new(listing_params)
+    @listing.user = current_user
 
     if listing.save
       redirect_to listings_path(listing.user_id)
@@ -43,6 +44,16 @@ class ListingsController < ApplicationController
     redirect_to listings_path(listings_path)
 
   end
+
+  def user
+    @user = User.find( params[:user_id] )
+
+    @listings = Listing.where( user: @user ).order( created_at: :desc )
+
+  #  @likes = @user.likes.joins( :post ).order( "posts.created_at DESC" )
+
+  end
+
 
   private
 
