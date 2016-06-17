@@ -1,5 +1,4 @@
 class ListingsController < ApplicationController
-
   def index
     @listings = Listing.order(created_at: :desc)
   end
@@ -10,11 +9,11 @@ class ListingsController < ApplicationController
   end
 
   def create
-    listing = Listing.new(listing_params)
+    @listing = Listing.new(listing_params)
     @listing.user = current_user
 
-    if listing.save
-      redirect_to listings_path(listing.user_id)
+    if @listing.save
+      redirect_to listings_path
     else
       render 'new'
     end
@@ -58,7 +57,7 @@ class ListingsController < ApplicationController
   private
 
   def listing_params
-    params.require( :listing ).permit( :title, :content, :join_invite, :city, :date, :user_id, category_ids: [])
+    params.require( :listing ).permit( :title, :content, :join_invite, :city, :date, :user_id)
   end
 
 end
