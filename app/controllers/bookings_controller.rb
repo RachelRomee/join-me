@@ -1,4 +1,4 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
 
   def create
       listing = Listing.find( params[:listing_id] )
@@ -6,6 +6,6 @@ class BookingController < ApplicationController
 
       booking.save
 
-      redirect_to listings_path
+      redirect_to current_user_path
    end
 end
