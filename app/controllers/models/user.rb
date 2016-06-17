@@ -4,9 +4,4 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :listings
-  has_many :bookings
-
-
-  mount_uploader :photo, ImageUploader
-
 end

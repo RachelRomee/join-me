@@ -40,7 +40,7 @@ class ListingsController < ApplicationController
 
     @listing.destroy
 
-    redirect_to listings_path(listings_path)
+    redirect_to listings
 
   end
 
@@ -49,7 +49,8 @@ class ListingsController < ApplicationController
 
     @listings = Listing.where( user: @user ).order( created_at: :desc )
 
-  #  @likes = @user.likes.joins( :post ).order( "posts.created_at DESC" )
+    @bookings = @user.bookings.joins( :listing ).order("listings.created_at DESC")
+
 
   end
 
@@ -59,5 +60,6 @@ class ListingsController < ApplicationController
   def listing_params
     params.require( :listing ).permit( :title, :content, :join_invite, :city, :date, :user_id)
   end
+
 
 end
