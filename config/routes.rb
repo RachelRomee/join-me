@@ -3,12 +3,13 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  resources :users
+
   resources :listings do
     resources :bookings
   end
 
   devise_for :users
+  resources :users
   get 'user_listings/:user_id' => 'listing#user', as: :user_listings
 
   # The priority is based upon order of creation: first created -> highest priority.
