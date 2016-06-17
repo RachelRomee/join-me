@@ -1,12 +1,6 @@
 class UsersController < ApplicationController
-
-
-
   def show
-    @user = User.find(params[:id])
-
-    #@listing = Listing.find(params[:id])
-    @listings = Listing.where(user: @user).order(created_at: :desc)
+    @user = User.includes(:listings).find(params[:id])
   end
 
   def listing
