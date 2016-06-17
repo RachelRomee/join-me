@@ -1,8 +1,8 @@
 class ListingsController < ApplicationController
+  load_and_authorize_resource
 
   def index
     @listings = Listing.order(created_at: :desc)
-    authorize! :read, @listings
   end
 
   def new
@@ -11,12 +11,6 @@ class ListingsController < ApplicationController
   end
 
   def create
-    listing_params = params.require( :post ).permit( :content )
-
-    listing = Listing.new(listing_params)
-    @listing.user = current_user
-    authorize! :create, @listing
-
     if listing.save
       redirect_to listings_path(listing.user_id)
     else
